@@ -5,11 +5,15 @@ import{Greet}  from './components/Greet'
 import Welcome from './components/Welcome'
 import Hello from './components/Hello'
 import Message from './components/Message'
+import Counter from './components/Counter'
+import ParentComponent from './components/ParentComponent';
 
 function App() {
   return (
-    <div className="App">
- { /*   <Greet name='Sundar'>
+    <div className="App">    
+     {/* <Counter/> */}
+     <ParentComponent/>
+     { /* <Greet name='Sundar'>
      <p>This is Child Tags</p>
    </Greet>
    <Greet name ='Viji'>
@@ -22,8 +26,8 @@ function App() {
      </Welcome> 
      <Welcome name='Jai'>
      </Welcome> 
-      <Hello/>*/ }
-  <Message></Message>
+     <Hello/>
+  <Message></Message>  */ }
     </div>
   );
 }
