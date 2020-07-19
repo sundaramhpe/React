@@ -8,11 +8,13 @@ import Message from './components/Message'
 import Counter from './components/Counter'
 import ParentComponent from './components/ParentComponent';
 import UserGreetings from './components/UserGreetings';
+import NameList from './components/NameList';
 
 function App() {
   return (
-    <div className="App">   
-    <UserGreetings/>
+    <div className="App"> 
+    <NameList/>
+    {/* {<UserGreetings/>} */}
      {/* <Counter/> */}
      {/*<ParentComponent/>*/}
      { /* <Greet name='Sundar'>
