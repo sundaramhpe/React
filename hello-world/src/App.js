@@ -7,12 +7,14 @@ import Hello from './components/Hello'
 import Message from './components/Message'
 import Counter from './components/Counter'
 import ParentComponent from './components/ParentComponent';
+import UserGreetings from './components/UserGreetings';
 
 function App() {
   return (
-    <div className="App">    
+    <div className="App">   
+    <UserGreetings/>
      {/* <Counter/> */}
-     <ParentComponent/>
+     {/*<ParentComponent/>*/}
      { /* <Greet name='Sundar'>
      <p>This is Child Tags</p>
    </Greet>
