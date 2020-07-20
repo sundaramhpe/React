@@ -21,7 +21,7 @@ const persons = [
     }
 ]
 //const personList = persons.map(person => <h2>my id {person.id} my Name is {person.name} my skills are {person.skill}</h2>)
-const personList = persons.map(person =><Person person ={person}/>)
+const personList = persons.map(person =><Person key={person.id } person ={person}/>)
 return <div>{personList}</div>
 
     //const names=['Sundar','Abi','Viji']
