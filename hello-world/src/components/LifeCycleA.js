@@ -15,15 +15,29 @@ export class LifeCycleA extends Component {
         console.log("LifeCycleA derived statefrom props executed ")
         return null
     }
-    componentDidMount(){
-        console.log("LifeCycleA Console did mout executed ")
+    shouldComponentUpdate(){
+        console.log("LifeCycleA should component update  executed ")
+        return true 
     }
-    
+    getSnapshotBeforeUpdate(prevProps,prevState){
+        console.log("LifeCycleA Snapshot before update   executed ")
+        return null
+    }
+    componentDidUpdate(){
+        console.log("LifeCycleA Console did Updte executed ")
+    }  
+    changeState =()=>{
+        this.setState({
+            name:'sundar'
+        })
+    }
+      
     render() {
         console.log("LifecycleA Render method executed ")
         return (
             <div>
                 LifeCycleA render
+                <button onClick={this.changeState}>Change State</button>
                 <LifeCycleB/>
             </div>
         )

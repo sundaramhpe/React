@@ -14,9 +14,18 @@ import React, { Component } from 'react'
        console.log("LifeCycleB derived statefrom props executed ")
        return null
    }
-   componentDidMount(){
-       console.log("LifeCycleB Console did mout executed ")
-   }
+   shouldComponentUpdate(){
+    console.log("LifeCycleB should component update  executed ") 
+    return true 
+}
+getSnapshotBeforeUpdate(prevProps,prevState){
+    console.log("LifeCycleB Snapshot before update   executed ")
+    return null
+}
+componentDidUpdate(){
+    console.log("LifeCycleB Console did Updte executed ")
+}  
+    
    
    render() {
        console.log("LifecycleB Render method executed ")
