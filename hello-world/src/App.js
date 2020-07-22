@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import{Greet}  from './components/Greet'
+import { Greet } from './components/Greet'
 import Welcome from './components/Welcome'
 import Hello from './components/Hello'
 import Message from './components/Message'
@@ -24,14 +24,31 @@ import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
 import ClickCounter from './components/ClickCounter';
 import HoverCounter from './components/HoverCounter';
+import User from './components/User';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
 
-function App() { 
-  
+
+function App() {
+
   return (
-    <div className="App"> 
-    <ClickCounter name='Sundar'/>
-    <HoverCounter/>
-    {/* <ErrorBoundary>
+    <div className="App">
+      <Counter>
+        {(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      </Counter>
+      <Counter>
+        {(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      </Counter>
+
+      {/* // <ClickCounter name='Sundar'/>
+    // <HoverCounter/>
+    // <User render={(isLoggedIn)=>isLoggedIn? 'Sundar' : 'Guest'}/> */}
+
+      {/* <ErrorBoundary>
     <Hero heroName='Batman'/>
     </ErrorBoundary>
     <ErrorBoundary>
@@ -40,22 +57,21 @@ function App() {
     <ErrorBoundary>
     <Hero heroName='joker' />
     </ErrorBoundary>     */}
-    {/* <PortalDemo/> */}
-    {/* <RefsDemo/> */}
-    {/* <ParentComp/> */}
-    {/* <Table/> */}
-    {/* <FragmentDemo/> */}
-    {/* <LifeCycleA/> */}
-    {/* <Form /> */}
-    {/* <h1 className='error'>Error </h1> */}
-  {/* <h1 className={styles.success}>Success </h1> */}
-     {/* <Inline />   */}
-    {/* {<Stylesheet primary={true}/>} */}
-    {/* {<NameList/>} */}
-    {/* {<UserGreetings/>} */}
-     {/* <Counter/> */}
-     {/*<ParentComponent/>*/}
-     { /* <Greet name='Sundar'>
+      {/* <PortalDemo/> */}
+      {/* <RefsDemo/> */}
+      {/* <ParentComp/> */}
+      {/* <Table/> */}
+      {/* <FragmentDemo/> */}
+      {/* <LifeCycleA/> */}
+      {/* <Form /> */}
+      {/* <h1 className='error'>Error </h1> */}
+      {/* <h1 className={styles.success}>Success </h1> */}
+      {/* <Inline />   */}
+      {/* {<Stylesheet primary={true}/>} */}
+      {/* {<NameList/>} */}
+      {/* {<UserGreetings/>} */}
+      {/*<ParentComponent/>*/}
+      { /* <Greet name='Sundar'>
      <p>This is Child Tags</p>
    </Greet>
    <Greet name ='Viji'>

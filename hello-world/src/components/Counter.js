@@ -8,35 +8,44 @@ class Counter extends Component {
              count:0
         }
     }
-    increment(){
-        // this.setState({
-        //     count:this.state.count+1
-        // },
-        // ()=>{
-        //     console.log('Callback Value',this.state.count)
-        // })
-        //this.state.count=this.state.count+1
-         this.setState((prevState)=>({
-             count: prevState.count+1 
-         }))
-        console.log(this.state.count) 
+    incrementCount = () => {
+        this.setState(prevState => {
+            return { count: prevState.count + 1 }
+        })
     }
-    incrementFive(){
-        this.increment()
-        this.increment()
-        this.increment()
-        this.increment()
-        this.increment()
-    }
+    // incrementCount(){
+    //     // this.setState({
+    //     //     count:this.state.count+1
+    //     // },
+    //     // ()=>{
+    //     //     console.log('Callback Value',this.state.count)
+    //     // })
+    //     //this.state.count=this.state.count+1
+    //      this.setState((prevState)=>({
+    //          count: prevState.count+1 
+    //      }))
+    //     //console.log(this.state.count) 
+    // }
+    // incrementFive(){
+    //     this.increment()
+    //     this.increment()
+    //     this.increment()
+    //     this.increment()
+    //     this.increment()
+    // }
     render() {
-        return ( 
+        return (
             <div>
-                <div> Count -{this.state.count} </div>
-                <button onClick={()=>this.incrementFive()}>Increment</button>
-                
-                
+                {this.props.children(this.state.count,this.incrementCount)}
             </div>
         )
+        // return ( 
+        //     <div>
+        //         <div> Count -{this.state.count} </div>
+        //         <button onClick={()=>this.incrementFive()}>Increment</button>               
+                
+        //     </div>
+        // )
     }
 }
 
