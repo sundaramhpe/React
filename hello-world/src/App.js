@@ -20,12 +20,23 @@ import Table from './components/Table';
 import ParentComp from './components/ParentComp'
 import RefsDemo from './components/RefsDemo';
 import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() { 
   
   return (
     <div className="App"> 
-    <PortalDemo/>
+    <ErrorBoundary>
+    <Hero heroName='Batman'/>
+    </ErrorBoundary>
+    <ErrorBoundary>
+    <Hero heroName='Super Man' />
+    </ErrorBoundary>
+    <ErrorBoundary>
+    <Hero heroName='joker' />
+    </ErrorBoundary>    
+    {/* <PortalDemo/> */}
     {/* <RefsDemo/> */}
     {/* <ParentComp/> */}
     {/* <Table/> */}
