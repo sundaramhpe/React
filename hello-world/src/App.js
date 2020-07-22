@@ -19,12 +19,14 @@ import FragmentDemo from './components/FragmentDemo';
 import Table from './components/Table';
 import ParentComp from './components/ParentComp'
 import RefsDemo from './components/RefsDemo';
+import PortalDemo from './components/PortalDemo';
 
 function App() { 
   
   return (
     <div className="App"> 
-    <RefsDemo/>
+    <PortalDemo/>
+    {/* <RefsDemo/> */}
     {/* <ParentComp/> */}
     {/* <Table/> */}
     {/* <FragmentDemo/> */}
