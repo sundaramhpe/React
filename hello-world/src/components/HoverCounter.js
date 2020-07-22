@@ -13,4 +13,4 @@ import withCounter from './withCounter'
     }
 }
 
-export default withCounter(HoverCounter) 
+export default withCounter(HoverCounter,10) 
