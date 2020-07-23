@@ -1,14 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {FaReact} from 'react-icons/fa'
+import{IconContext} from 'react-icons'
+import {FaReact, FaBluetooth} from 'react-icons/fa'
+import {MdAlarm} from 'react-icons/md'
 
 function App() {
   return (
+    <IconContext.Provider value={{ color:'blue', size:'5rem' }}  >
     <div className="App">
-      <FaReact />
-     
+      <FaReact /> 
+      <MdAlarm  color='purple' size='10rem'/>     
     </div>
+    </IconContext.Provider>
   );
 }
 
