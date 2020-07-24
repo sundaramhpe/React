@@ -15,5 +15,4 @@ function App() {
     </IconContext.Provider>
   );
 }
-
 export default App;
